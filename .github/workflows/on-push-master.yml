@@ -33,7 +33,7 @@ jobs:
               echo "::set-output name=run_job::true"
             fi
           done < files.txt
-  job_for_db:
+  publish_on_aws:
     name: Job for 'db' folder
     needs: check
     if: needs.check.outputs.run_job == 'true'
